@@ -1,8 +1,7 @@
 import React from "react";
 
 import { testimonials } from "../data";
-
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";

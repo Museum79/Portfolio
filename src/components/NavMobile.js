@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 
 import { navigation } from '../data';
-
 import { XIcon, MenuAlt3Icon } from '@heroicons/react/outline';
-
-
-import Socials from './Socials';
-
 import { motion } from 'framer-motion';
-
 import { Link } from 'react-scroll';
 
 const NavMobile = () => {

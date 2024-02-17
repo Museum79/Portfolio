@@ -8,6 +8,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [sujet, setSujet] = useState("");
   const [message, setMessage] = useState("");
+  // eslint-disable-next-line
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isMessageSent, setIsMessageSent] = useState(false);
   const [messageTimeout, setMessageTimeout] = useState(false);
@@ -76,7 +77,7 @@ const Contact = () => {
       setErrors(formErrors);
     }
   };
-
+ 
   useEffect(() => {
     return () => {
       if (messageTimeout) {
@@ -94,11 +95,11 @@ const Contact = () => {
                     before:content-contact relative
                     before:absolute
                     before:opacity-40
-                    before:-top-7
+                    before:-top-[2rem]
                     before:-left-40
                     before:hidden
                     before:lg:block"
-          ></h2>
+          >Contact</h2>
           <p className="subtitle">
             N'hésitez pas à me contacter pour discuter de vos projets, idées ou
             simplement pour dire bonjour ! Je serais ravi de vous lire et de
