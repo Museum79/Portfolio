@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { navigation } from '../data';
 import { XIcon, MenuAlt3Icon } from '@heroicons/react/outline';
 import { motion } from 'framer-motion';
@@ -7,6 +6,10 @@ import { Link } from 'react-scroll';
 
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const circleVariants = {
     hidden: {
@@ -16,8 +19,8 @@ const NavMobile = () => {
       scale: 180,
       transition: {
         type: 'spring',
-        stifness: 160,
-        dmaping: 60,
+        stiffness: 160, // Correction de la faute de frappe
+        damping: 60, // Correction de la faute de frappe
       },
     },
   };
@@ -37,7 +40,7 @@ const NavMobile = () => {
   return (
     <nav className='relative'>
       <div
-        onClick={() => setIsOpen(true)}
+        onClick={toggleMenu} // Utilisez la fonction toggleMenu pour ouvrir/fermer le menu
         className='cursor-pointer text-white'
       >
         <MenuAlt3Icon className='w-8 h-8' />
@@ -57,12 +60,12 @@ const NavMobile = () => {
         animate={isOpen ? 'visible' : ''}
         className={`${
           isOpen ? 'right-0' : 'right-full'
-          } fixed top-0 bottom-0 w-full flex flex-col
+        } fixed top-0 bottom-0 w-full flex flex-col
         justify-center items-center transition-all
         duration-300 overflow-hidden`}
       >
         <div
-          onClick={() => setIsOpen(false)}
+          onClick={toggleMenu} 
           className='cursor-pointer absolute top-8
               right-8'
         >
@@ -77,6 +80,7 @@ const NavMobile = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
+                onClick={toggleMenu}
                 className='text-xl cursor-pointer
                 capitalize'
                 >
@@ -90,4 +94,4 @@ const NavMobile = () => {
   );
 }
 
-export default NavMobile
+export default NavMobile;
