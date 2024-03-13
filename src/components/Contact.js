@@ -3,7 +3,7 @@ import { contact } from "../data";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  
+
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
   const [sujet, setSujet] = useState("");
@@ -77,7 +77,7 @@ const Contact = () => {
       setErrors(formErrors);
     }
   };
- 
+
   useEffect(() => {
     return () => {
       if (messageTimeout) {
@@ -87,6 +87,7 @@ const Contact = () => {
   }, [messageTimeout]);
 
   return (
+
     <section className="section bg-primary" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
@@ -100,11 +101,10 @@ const Contact = () => {
                     before:hidden
                     before:lg:block"
           >Contact</h2>
-          <p className="subtitle">
-            N'hésitez pas à me contacter pour discuter de vos projets, idées ou
-            simplement pour dire bonjour ! Je serais ravi de vous lire et de
-            répondre à toutes vos questions.
+          <p className="subtitle sm:text-center">
+            N'hésitez pas à me contacter pour discuter de vos projets, idées ou simplement pour dire bonjour ! Je serais ravi de vous lire et de répondre à toutes vos questions.
           </p>
+
         </div>
         <div
           className="flex flex-col lg:gap-x-8 lg:flex-row"
@@ -114,14 +114,13 @@ const Contact = () => {
               const { icon, title, subtitle, description } = item;
 
               return (
-                <div className="flex flex-col lg:flex-row gap-x-4" key={index}>
+                <div className="flex flex-row gap-x-4 w-full lg:w-1/2" key={index}>
                   <div
-                    className="text-accent text-2xl rounded-sm w-14 h-14 flex items-start justify-center mt-2 mb-4 lg:mb-0"
+                    className="text-accent text-2xl rounded-sm w-14 h-14 flex justify-center mt-2 mb-4 lg:mb-0"
                   >
                     {icon}
                   </div>
-                  <div>
-                    <h4 className="font-body text-xl mb-1">{title}</h4>
+                  <div className="flex-grow">  <h4 className="font-body text-xl mb-1">{title}</h4>
                     <p className="mb-1">{subtitle}</p>
                     <p className="text-accent font-normal">{description}</p>
                   </div>
