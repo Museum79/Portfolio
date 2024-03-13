@@ -40,6 +40,7 @@ import SkillImg9 from './assets/img/skills/symfony.png';
 import SkillImg10 from './assets/img/skills/docker.png';
 import SkillImg11 from './assets/img/skills/tailwind.png';
 import SkillImg12 from './assets/img/skills/spring.png';
+import SkillImg13 from './assets/img/skills/java.png';
 
 
 
@@ -156,43 +157,60 @@ export const projectsNav = [
 export const skills = [
   {
     image: SkillImg1,
+    title: "HTML5",
   },
   {
     image: SkillImg2,
+    title: "CSS3",
   },
   {
     image: SkillImg3,
+    title: "JavaScript",
   },
   {
     image: SkillImg4,
+    title: "ReactJs",
   },
   {
     image: SkillImg5,
+    title: "NextJs",
   },
   {
     image: SkillImg6,
+    title: "NodeJs",
   },
   {
     image: SkillImg7,
+    title: "Git",
   },
   {
     image: SkillImg8,
+    title: "Figma",
   }
 ];
+
 
 export const skills2 = [
 
   {
     image: SkillImg9,
+    title: "Symfony"
   },
   {
     image: SkillImg10,
+    title: "Docker"
   },
   {
     image: SkillImg11,
+    title: "Tailwind"
   },
   {
     image: SkillImg12,
+    title: "Spring"
+  },
+  {
+    image: SkillImg13,
+    title: "Java"
   },
 ] 
 
